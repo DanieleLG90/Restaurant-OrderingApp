@@ -21,3 +21,11 @@ header{
     background-repeat: no-repeat;
     background-position: center right;
 }
+
+h1{
+    margin: 0;
+}
+
+h2{
+    margin-bottom: 20px;
+}
