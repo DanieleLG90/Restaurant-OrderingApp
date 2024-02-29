@@ -29,3 +29,48 @@ h1{
 h2{
     margin-bottom: 20px;
 }
+
+.container{
+    margin: 0 10px;
+}
+.foodElm{
+    display: flex;
+    gap: 15px;
+    padding: 25px 0;
+    background-color: whitesmoke;
+    border-bottom: 1px solid darkgrey;
+}
+
+.textContent{
+    margin-left: 0;
+
+}
+
+.foodImg{
+    margin: auto 0;
+    font-size: 40px;
+}
+
+.name{
+    font-size: 20px;
+}
+
+.ingredients{
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+.price{
+    margin-top: 8px;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.addBtn{
+    margin: auto 0 auto auto;
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+    border: 1px solid darkgrey;
+    border-radius: 50%;
+}
