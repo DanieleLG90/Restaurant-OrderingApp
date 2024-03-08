@@ -10,9 +10,16 @@ function addElmToMenu (food){
                 <p class="ingredients">Ingredients: ${foodElm.ingredients}</p>
                 <p class="price">${foodElm.price}$</p>
             </div>
-            <button class="addBtn" id="addBtn">+</button>
+            <button class="addBtn" id="${foodElm.id}">+</button>
         </div>`
     })
 }
 
 foodList.innerHTML = addElmToMenu(menuArray).join('')
+
+console.log(foodList)
+
+document.addEventListener('click', function (e) {
+    console.log(e.target.id)
+    console.log('clicked')
+})
