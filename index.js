@@ -17,9 +17,8 @@ function addElmToMenu (food){
 
 foodList.innerHTML = addElmToMenu(menuArray).join('')
 
-console.log(foodList)
+
 
 document.addEventListener('click', function (e) {
-    console.log(e.target.id)
-    console.log('clicked')
+    console.log(menuArray.id)
 })
