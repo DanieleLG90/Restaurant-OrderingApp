@@ -25,5 +25,6 @@ const menuItem = menuArray.map(function(foodId){
 document.addEventListener('click', function(e) {
     menuItem
     console.log(`clicked ${e.target.id}`)
+    // data attribute
 
 })
