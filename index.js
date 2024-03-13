@@ -23,8 +23,17 @@ const menuItem = menuArray.map(function(foodId){
 
 
 document.addEventListener('click', function(e) {
-    menuItem
-    console.log(`clicked ${e.target.id}`)
-    // data attribute
+    if (e.target.id){
+        addingOrderedFood(e.target.id)
+    }
 
 })
+
+function addingOrderedFood (food){
+    const addItem = menuArray.filter(function(foodObj){
+        return foodObj.id === food
+        })[0]
+
+    console.log (addItem)
+
+}
