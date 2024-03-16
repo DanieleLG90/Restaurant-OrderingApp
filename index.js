@@ -26,11 +26,12 @@ document.addEventListener('click', function(e) {
 
 })
 
+const orderedList = []
+
 function addingOrderedFood (foodXx){
     const foodToAdd = menuArray.filter(function(foodObj){
-        //console.log(typeof foodObj.id)
-        //console.log(typeof Number(foodXx))
         return foodObj.id == Number(foodXx)
     })[0]
-    console.log(foodToAdd)
+    orderedList.push(foodToAdd)
+    console.log(orderedList)
 }
