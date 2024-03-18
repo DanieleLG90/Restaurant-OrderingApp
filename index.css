@@ -74,3 +74,39 @@ h2{
     border: 1px solid darkgrey;
     border-radius: 50%;
 }
+
+/* css for the ordering part*/
+.orderTlt{
+    text-align: center;
+    font-size: 22px;
+}
+
+.none{
+    display: none;
+}
+
+.orderingContainer{
+    margin-top: 20px;
+}
+
+.foodList{
+    display: flex;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+}
+
+.orderName{
+    font-size: 20px;
+
+}
+.removeBtn{
+    margin: 0 0 0 20px;
+    border: none;
+    background-color: transparent;
+
+
+}
+.orderPrice{
+    margin: 0 0 0 auto;
+}
