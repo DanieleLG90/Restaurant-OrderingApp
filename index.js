@@ -34,17 +34,17 @@ function addingOrderedFood (foodXx){
     const foodToAdd = menuArray.filter(function(foodObj){
         return foodObj.id == Number(foodXx)
     })[0]
-    //orderedList.push(foodToAdd)
     orderedList.push(foodToAdd)
-    console.log(orderedList)
     orderingContainer.classList.remove('none')
     orderedFoodList.innerHTML = orderingList(orderedList).join('')
 }
 
 function orderingList (food){
     return food.map(function(foodItem){
-        return `<h4 class="orderName">${foodItem.name}</h4>
+        return `<div class="foodListElm">
+                <h4 class="orderName">${foodItem.name}</h4>
                 <button class="removeBtn" data-remove="${foodItem.id}">remove</button>
-                <span class="orderPrice">$${foodItem.price}</span>`
+                <span class="orderPrice">$${foodItem.price}</span>
+                </div>`
     })
 }
