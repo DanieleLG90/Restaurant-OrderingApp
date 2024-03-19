@@ -2,6 +2,7 @@ import {menuArray} from "./data.js";
 const foodList = document.getElementById('container')
 const orderingContainer = document.getElementById('orderingContainer')
 const orderedFoodList = document.getElementById('orderedFoodList')
+const totalP = document.getElementById('totalP')
 
 function addElmToMenu (food){
     return food.map(function(foodElm){
@@ -37,6 +38,7 @@ function addingOrderedFood (foodXx){
     orderedList.push(foodToAdd)
     orderingContainer.classList.remove('none')
     orderedFoodList.innerHTML = orderingList(orderedList).join('')
+    totalP.innerHTML = totalPrice(orderedList)
 }
 
 function orderingList (food){
@@ -47,4 +49,11 @@ function orderingList (food){
                 <span class="orderPrice">$${foodItem.price}</span>
                 </div>`
     })
+}
+
+function totalPrice (price){
+    const totalPrc = price.reduce(function (total, singlePrice){
+        return total + singlePrice.price
+    }, 0)
+    return `$${totalPrc}`
 }

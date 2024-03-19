@@ -87,6 +87,7 @@ h2{
 
 .orderingContainer{
     margin-top: 20px;
+    padding: 0 11px;
 }
 
 .foodList{
@@ -99,6 +100,7 @@ h2{
 
 .foodListElm{
     display: flex;
+    margin-bottom: 5px;
 }
 
 .orderName{
@@ -106,6 +108,7 @@ h2{
 
 }
 .removeBtn{
+    color: darkgray;
     margin: 0 0 0 20px;
     border: none;
     background-color: transparent;
@@ -114,4 +117,28 @@ h2{
 }
 .orderPrice{
     margin: 0 0 0 auto;
+}
+
+.totalContainer{
+    display: flex;
+    margin-top: 20px;
+}
+
+.tPTitle{
+    font-size: 22px;
+}
+
+.totalP{
+    margin: 0 0 0 auto;
+    font-size: 19px;
+}
+
+.completeOrder{
+    margin-top: 12px;
+    padding: 8px 0;
+    background-color: green;
+    color: white;
+    width: 100%;
+    font-size: 25px;
+
 }
