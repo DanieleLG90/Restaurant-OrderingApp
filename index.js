@@ -24,6 +24,7 @@ foodList.innerHTML = addElmToMenu(menuArray).join('')
 document.addEventListener('click', function(e) {
     if (e.target.dataset.id){
         addingOrderedFood(e.target.dataset.id)
+        console.log(orderedList)
         //console.log(e.target.dataset.id)
     }
 
