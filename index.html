@@ -23,28 +23,35 @@
                 <h4 class="tPTitle">Total Price:</h4>
                 <span class="totalP" id="totalP"></span>
             </div>
-            <button class="completeOrder" id="completeOrder">Complete Order</button>
+            <button class="completeOrder" id="completeOrderBtn">Complete Order</button>
         </div>
-        <div class="infoContainer ">
+        <div class="infoContainer none" id="infoContainer">
             <h4 class="infoTitle">Enter card detailes</h4>
             <div>
-                <form>
+                <form id="loginForm">
                     <input type="text"
                             id="customerName"
                             name="customerName"
                             placeholder="Enter your name"
+                            required
                             >
-                    <input type="number"
+                    <input type="text"
                             id="customerCard"
                             name="customerCard"
                             placeholder="Enter card number"
+                            minlength="6"
+                            maxlength="6"
+                            required
                             >
-                    <input type="number"
+                    <input type="text"
                             id="customerCVV"
                             name="customerCVV"
                             placeholder="Enter CVV"
+                            minlength="3"
+                            maxlength="3"
+                            required
                             ><br>
-                    <button class="payBtn">PAY</button>
+                    <button class="payBtn" id="payBtn">PAY</button>
                 </form>
             </div>
         </div>

@@ -3,6 +3,10 @@ const foodList = document.getElementById('container')
 const orderingContainer = document.getElementById('orderingContainer')
 const orderedFoodList = document.getElementById('orderedFoodList')
 const totalP = document.getElementById('totalP')
+const completeOrderBtn = document.getElementById('completeOrderBtn')
+const infoContainer = document.getElementById('infoContainer')
+const payBtn = document.getElementById('payBtn')
+const customerName = document.getElementById('customerName')
 
 function addElmToMenu (food){
     return food.map(function(foodElm){
@@ -58,3 +62,20 @@ function totalPrice (price){
     }, 0)
     return `$${totalPrc}`
 }
+
+completeOrderBtn.addEventListener('click', function(){
+    console.log('ciao')
+    infoContainer.classList.remove('none')
+})
+
+const loginForm = document.getElementById('infoContainer')
+loginForm.addEventListener('submit', function(e){
+    e.preventDefault()
+})
+
+payBtn.addEventListener('click', function(){
+    //console.log(customerName.value)
+    orderingContainer.innerHTML = `Thank you ${customerName.value} for your order!`
+    infoContainer.classList.add('none')
+
+})

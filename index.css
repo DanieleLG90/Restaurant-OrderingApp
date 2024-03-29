@@ -170,6 +170,7 @@ form{
 }
 
 input{
+    font-size: 18px;
     margin-top: 10px;
     padding: 10px 0;
     width: 100%;
@@ -181,4 +182,9 @@ input{
     width: 100%;
     background-color: green;
     color: white;
+    font-size: 20px;
+}
+
+.hide{
+    display: none;
 }
