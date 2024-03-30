@@ -72,10 +72,29 @@ const loginForm = document.getElementById('infoContainer')
 loginForm.addEventListener('submit', function(e){
     e.preventDefault()
 })
-
-payBtn.addEventListener('click', function(){
+/*
+payBtn.addEventListener('submit', function(){
     //console.log(customerName.value)
-    orderingContainer.innerHTML = `Thank you ${customerName.value} for your order!`
+    orderingContainer.innerHTML = `<div>
+                                    <h4 class='greatingMsg'>Thanks, ${customerName.value}! your order is on the way </h4>
+                                   </div>`
     infoContainer.classList.add('none')
 
+})
+*/
+/*
+function ciao (){
+    console.log('ciao')
+    orderingContainer.innerHTML = `<div>
+                                    <h4 class='greatingMsg'>Thanks, ${customerName.value}! your order is on the way </h4>
+                                   </div>`
+    infoContainer.classList.add('none')
+}
+*/
+document.getElementById('loginForm').addEventListener('submit', function(){
+   // console.log('ciao')
+    orderingContainer.innerHTML = `<div>
+                                    <h4 class='greatingMsg'>Thanks, ${customerName.value}! your order is on the way!</h4>
+                                   </div>`
+    infoContainer.classList.add('none')
 })
