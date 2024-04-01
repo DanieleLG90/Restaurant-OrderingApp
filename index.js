@@ -5,8 +5,8 @@ const orderedFoodList = document.getElementById('orderedFoodList')
 const totalP = document.getElementById('totalP')
 const completeOrderBtn = document.getElementById('completeOrderBtn')
 const infoContainer = document.getElementById('infoContainer')
-const payBtn = document.getElementById('payBtn')
 const customerName = document.getElementById('customerName')
+const addBtn = document.getElementsByClassName('addBtn')
 
 function addElmToMenu (food){
     return food.map(function(foodElm){
@@ -23,7 +23,6 @@ function addElmToMenu (food){
 }
 
 foodList.innerHTML = addElmToMenu(menuArray).join('')
-
 
 document.addEventListener('click', function(e) {
     if (e.target.dataset.id){
@@ -44,6 +43,7 @@ function addingOrderedFood (foodXx){
     orderingContainer.classList.remove('none')
     orderedFoodList.innerHTML = orderingList(orderedList).join('')
     totalP.innerHTML = totalPrice(orderedList)
+
 }
 
 function orderingList (food){
@@ -66,31 +66,14 @@ function totalPrice (price){
 completeOrderBtn.addEventListener('click', function(){
     console.log('ciao')
     infoContainer.classList.remove('none')
+    addBtn.classList.add('none')
 })
 
 const loginForm = document.getElementById('infoContainer')
 loginForm.addEventListener('submit', function(e){
     e.preventDefault()
 })
-/*
-payBtn.addEventListener('submit', function(){
-    //console.log(customerName.value)
-    orderingContainer.innerHTML = `<div>
-                                    <h4 class='greatingMsg'>Thanks, ${customerName.value}! your order is on the way </h4>
-                                   </div>`
-    infoContainer.classList.add('none')
 
-})
-*/
-/*
-function ciao (){
-    console.log('ciao')
-    orderingContainer.innerHTML = `<div>
-                                    <h4 class='greatingMsg'>Thanks, ${customerName.value}! your order is on the way </h4>
-                                   </div>`
-    infoContainer.classList.add('none')
-}
-*/
 document.getElementById('loginForm').addEventListener('submit', function(){
    // console.log('ciao')
     orderingContainer.innerHTML = `<div>
