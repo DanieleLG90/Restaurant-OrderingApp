@@ -145,22 +145,30 @@ h2{
     cursor: pointer;
 }
 
+
 .infoContainer{
-    width: 390px;
-    height: 350px;
+    min-width: 320px;
+    max-width: 480px;
     position: absolute;
     inset: 0;
     margin: 0 auto;
-    top: 180px;
+    background-color: rgb(255, 255, 255, 0.45);
+}
+
+.formContainer{
+    width: 390px;
+    height: 350px;
+    border-radius: 3px;
+    margin: 0 auto;
+    margin-top: 180px;
     background-color: white;
-    opacity: 95%;
     box-shadow: 0 0 80px black;
     text-align: center;
-
 }
 
 .infoTitle{
     margin-top: 25px;
+    padding-top: 25px;
     font-size: 22px;
 }
 
