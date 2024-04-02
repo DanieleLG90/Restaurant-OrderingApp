@@ -6,6 +6,7 @@ const totalP = document.getElementById('totalP')
 const completeOrderBtn = document.getElementById('completeOrderBtn')
 const infoContainer = document.getElementById('infoContainer')
 const customerName = document.getElementById('customerName')
+const backToMenuBtn = document.getElementById('backToMenuBtn')
 
 function addElmToMenu (food){
     return food.map(function(foodElm){
@@ -95,5 +96,9 @@ document.getElementById('loginForm').addEventListener('submit', function(){
     orderingContainer.innerHTML = `<div>
                                     <h4 class='greatingMsg'>Thanks, ${customerName.value}! Your order is on the way!</h4>
                                    </div>`
+    infoContainer.classList.add('none')
+})
+
+backToMenuBtn.addEventListener('click', function(){
     infoContainer.classList.add('none')
 })

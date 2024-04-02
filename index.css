@@ -194,6 +194,7 @@ input{
     background-color: green;
     color: white;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .greatingMsg{
