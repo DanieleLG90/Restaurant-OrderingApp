@@ -6,7 +6,6 @@ const totalP = document.getElementById('totalP')
 const completeOrderBtn = document.getElementById('completeOrderBtn')
 const infoContainer = document.getElementById('infoContainer')
 const customerName = document.getElementById('customerName')
-const addBtn = document.getElementsByClassName('addBtn')
 
 function addElmToMenu (food){
     return food.map(function(foodElm){
@@ -27,11 +26,24 @@ foodList.innerHTML = addElmToMenu(menuArray).join('')
 document.addEventListener('click', function(e) {
     if (e.target.dataset.id){
         addingOrderedFood(e.target.dataset.id)
-        console.log(orderedList)
+       //console.log(orderedList)
         //console.log(e.target.dataset.id)
+    } else if (e.target.dataset.remove){
+        console.log(orderedList)
+        removeItem (e.target.dataset.remove)
+        orderedFoodList.innerHTML = orderingList(orderedList).join('')
+        if (orderedList.length === 0){
+            clearWindow ()
+        }
     }
+    
 
 })
+
+function clearWindow () {
+    orderingContainer.classList.add('none')
+}
+
 
 const orderedList = []
 
@@ -40,6 +52,13 @@ function addingOrderedFood (foodXx){
         return foodObj.id == Number(foodXx)
     })[0]
     orderedList.push(foodToAdd)
+    /*
+    if (orderedList.length > 0){
+        orderingContainer.classList.remove('none')  
+    } else{
+        orderingContainer.classList.add('none')
+    }
+    */
     orderingContainer.classList.remove('none')
     orderedFoodList.innerHTML = orderingList(orderedList).join('')
     totalP.innerHTML = totalPrice(orderedList)
@@ -63,10 +82,17 @@ function totalPrice (price){
     return `$${totalPrc}`
 }
 
+function removeItem (food){
+    const foodToRemove = menuArray.filter(function(foodObj){
+        return foodObj.id == Number(food)
+    })[0]
+    orderedList.splice(foodToRemove, 1)
+    return orderedList
+}
+
 completeOrderBtn.addEventListener('click', function(){
-    console.log('ciao')
+    //console.log('ciao')
     infoContainer.classList.remove('none')
-    addBtn.classList.add('none')
 })
 
 const loginForm = document.getElementById('infoContainer')
@@ -77,7 +103,7 @@ loginForm.addEventListener('submit', function(e){
 document.getElementById('loginForm').addEventListener('submit', function(){
    // console.log('ciao')
     orderingContainer.innerHTML = `<div>
-                                    <h4 class='greatingMsg'>Thanks, ${customerName.value}! your order is on the way!</h4>
+                                    <h4 class='greatingMsg'>Thanks, ${customerName.value}! Your order is on the way!</h4>
                                    </div>`
     infoContainer.classList.add('none')
 })
