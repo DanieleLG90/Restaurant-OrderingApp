@@ -29,21 +29,18 @@ document.addEventListener('click', function(e) {
        //console.log(orderedList)
         //console.log(e.target.dataset.id)
     } else if (e.target.dataset.remove){
-        console.log(orderedList)
+        //console.log(orderedList)
         removeItem (e.target.dataset.remove)
         orderedFoodList.innerHTML = orderingList(orderedList).join('')
         if (orderedList.length === 0){
             clearWindow ()
         }
     }
-    
-
 })
 
 function clearWindow () {
     orderingContainer.classList.add('none')
 }
-
 
 const orderedList = []
 
@@ -52,13 +49,6 @@ function addingOrderedFood (foodXx){
         return foodObj.id == Number(foodXx)
     })[0]
     orderedList.push(foodToAdd)
-    /*
-    if (orderedList.length > 0){
-        orderingContainer.classList.remove('none')  
-    } else{
-        orderingContainer.classList.add('none')
-    }
-    */
     orderingContainer.classList.remove('none')
     orderedFoodList.innerHTML = orderingList(orderedList).join('')
     totalP.innerHTML = totalPrice(orderedList)
