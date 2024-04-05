@@ -7,8 +7,10 @@ body {
     margin: auto;
     min-width: 320px;
     max-width: 480px;
-    background-color: blanchedalmond;
+    /*background-color: blanchedalmond;*/
+    background-color: #f3f4f6;
     background-size: cover;
+    font-family: "Oswald", sans-serif;
 }
 
 header{
@@ -24,10 +26,12 @@ header{
 
 h1{
     margin: 0;
+    margin-bottom: 10px;
 }
 
 h2{
     margin-bottom: 20px;
+    font-weight: 400;
 }
 
 .container{
@@ -38,7 +42,7 @@ h2{
     display: flex;
     gap: 15px;
     padding: 25px 0;
-    background-color: whitesmoke;
+    /*background-color: whitesmoke;*/
     border-bottom: 1px solid darkgrey;
 }
 
@@ -53,6 +57,7 @@ h2{
 
 .name{
     font-size: 20px;
+    font-weight: 600;
 }
 
 .ingredients{
@@ -70,7 +75,8 @@ h2{
     margin: auto 0 auto auto;
     height: 40px;
     width: 40px;
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: 200;
     border: 1px solid darkgrey;
     border-radius: 50%;
     cursor: pointer;
@@ -143,7 +149,7 @@ h2{
 .completeOrderBtn{
     margin-top: 12px;
     padding: 6px 0;
-    background-color: green;
+    background-color:#34d399;
     color: white;
     width: 100%;
     font-size: 22px;
@@ -154,8 +160,8 @@ h2{
 
 .completeOrderBtn:active{
     background-color: white;
-    color: green;
-    border: 2px solid green;
+    color:#34d399 ;
+    border: 2px solid #34d399;
 }
 /*CSS for the form part*/
 .infoContainer{
@@ -212,36 +218,37 @@ input{
 }
 
 .payBtn{
-    background-color: green;
+    background-color: #34d399;
     color: white;
-    border: 2px solid green;
+    border: 2px solid #34d399;
 }
 
 .payBtn:active{
     background-color: white;
-    color: green;
-    border: 2px solid green;
+    color: #34d399;
+    border: 2px solid #34d399;
 }
 
 .backBtn{
     background-color: white;
-    color: green;
-    border: 2px solid green;
+    color: #34d399;
+    border: 2px solid #34d399;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     
 }
 
 .backBtn:active{
-    background-color: green;
+    background-color: #34d399;
     color: white;
-    border: 2px solid green;
+    border: 2px solid #34d399;
 }
 /*CSS for the final msg*/
 .greatingMsg{
     padding: 20px 0;
     text-align: center;
-    background-color: green;
-    color: white;
+    background-color: #A7F3D0;
+    color: #059669;
     font-size: 20px;
+    font-weight: 300;
 }
