@@ -60,6 +60,7 @@ function orderingList (food){
     return food.map(function(foodItem){
         return `<div class="foodListElm">
                 <h4 class="orderName">${foodItem.name}</h4>
+                
                 <button class="removeBtn" data-remove="${foodItem.id}">remove</button>
                 <span class="orderPrice">$${foodItem.price}</span>
                 </div>`
