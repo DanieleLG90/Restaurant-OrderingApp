@@ -71,7 +71,12 @@ function totalPrice (price){
     const totalPrc = price.reduce(function (total, singlePrice){
         return total + singlePrice.price
     }, 0)
+    if (totalPrc > 50){
+        console.log ('ciao Bianca')
+    }
+    console.log(typeof totalPrc)
     return `$${totalPrc}`
+
 }
 
 function removeItem (food){
