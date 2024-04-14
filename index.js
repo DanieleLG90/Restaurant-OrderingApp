@@ -27,8 +27,12 @@ foodList.innerHTML = addElmToMenu(menuArray).join('')
 document.addEventListener('click', function(e) {
     if (e.target.dataset.id){
         addingOrderedFood(e.target.dataset.id)
-       console.log(orderedList)
+        orderingContainer.classList.remove('none')
+        //console.log(orderedList)
         //console.log(e.target.dataset.id)
+    } else if (orderedList.includes(e.target.dataset.id)){
+        //console.log(orderedList)
+        //console.log('EUREKA')
     } else if (e.target.dataset.remove){
         //console.log(orderedList)
         removeItem (e.target.dataset.remove)
@@ -49,16 +53,15 @@ function addingOrderedFood (foodXx){
     const foodToAdd = menuArray.filter(function(foodObj){
         return foodObj.id == Number(foodXx)
     })[0]
-    if(orderedList.includes(foodToAdd)){
-        console.log('already there')
-    } else {
-        orderedList.push(foodToAdd)
-    }
     //orderedList.push(foodToAdd)
-    orderingContainer.classList.remove('none')
+    if(orderedList.includes(foodToAdd)){
+        console.log('none')
+    } else{
+        orderedList.push(foodToAdd)
+        //orderedFoodList.innerHTML = orderingList(orderedList).join('')
+    }
     orderedFoodList.innerHTML = orderingList(orderedList).join('')
     totalP.innerHTML = totalPrice(orderedList)
-
 }
 
 function orderingList (food){
