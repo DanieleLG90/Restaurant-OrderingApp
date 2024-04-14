@@ -53,13 +53,15 @@ function addingOrderedFood (foodXx){
     const foodToAdd = menuArray.filter(function(foodObj){
         return foodObj.id == Number(foodXx)
     })[0]
-    //orderedList.push(foodToAdd)
+    orderedList.push(foodToAdd)
+    /*
     if(orderedList.includes(foodToAdd)){
-        console.log('none')
+        console.log(foodToAdd.name)
     } else{
         orderedList.push(foodToAdd)
         //orderedFoodList.innerHTML = orderingList(orderedList).join('')
     }
+    */
     orderedFoodList.innerHTML = orderingList(orderedList).join('')
     totalP.innerHTML = totalPrice(orderedList)
 }
@@ -82,7 +84,7 @@ function totalPrice (price){
     if (totalPrc > 50){
         console.log ('ciao Bianca')
     }
-    console.log(typeof totalPrc)
+    //console.log(typeof totalPrc)
     return `$${totalPrc}`
 
 }
