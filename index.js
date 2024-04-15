@@ -77,15 +77,19 @@ function totalPrice (price){
     
     const tenPerDisc = (totalPrc * 10) / 100
     const fifteenPerDisc = (totalPrc * 15) / 100
-    if (totalPrc > 50){
+    if (totalPrc < 50){
+        //return `10% $${totalPrc - tenPerDisc}`
+        return `$${totalPrc}`
+        console.log('minore 50')
+    } else if (totalPrc < 70){
+        //return `15% $${totalPrc - fifteenPerDisc}`
         return `10% $${totalPrc - tenPerDisc}`
-    } 
-    if (totalPrc > 70){
+        console.log('minore 70')
+    } else{
         return `15% $${totalPrc - fifteenPerDisc}`
+        console.log('maggiore 70')
     }
-    
-    return `$${totalPrc}`
-
+    //return `$${totalPrc}`
 }
 
 function removeItem (food){

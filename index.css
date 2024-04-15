@@ -94,6 +94,13 @@ h2{
     font-size: 22px;
 }
 
+.discountPromo{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
+    color: darkgray;
+}
+
 .none{
     display: none;
 }
