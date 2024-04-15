@@ -114,6 +114,10 @@ document.getElementById('loginForm').addEventListener('submit', function(){
    // console.log('ciao')
     orderingContainer.innerHTML = `<div>
                                     <h4 class='greatingMsg'>Thanks, ${customerName.value}! Your order is on the way!</h4>
+                                    <div class="promo">
+                                        <h4 class="promoIntro">Promo code for your next order:</h4>
+                                        <p class="promoCode">${makePromo(3)}-${makePromo(3)}</p>
+                                    </div>
                                    </div>`
     infoContainer.classList.add('none')
 })
@@ -121,3 +125,18 @@ document.getElementById('loginForm').addEventListener('submit', function(){
 backToMenuBtn.addEventListener('click', function(){
     infoContainer.classList.add('none')
 })
+
+// generate random promo code for next order
+
+function makePromo(length) {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let counter = 0;
+    while (counter < length) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return result;
+}
+

@@ -259,3 +259,24 @@ input{
     font-size: 20px;
     font-weight: 300;
 }
+
+.promo{
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.promoIntro{
+    font-size: 18px;
+    font-weight: 400;
+    color: darkgray;
+}
+.promoCode{
+    font-size: 22px;
+    border: 2px solid #059669;
+    border-radius: 2px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 8px 16px;
+}
