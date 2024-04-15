@@ -37,6 +37,7 @@ document.addEventListener('click', function(e) {
         //console.log(orderedList)
         removeItem (e.target.dataset.remove)
         orderedFoodList.innerHTML = orderingList(orderedList).join('')
+        totalP.innerHTML = totalPrice(orderedList)
         if (orderedList.length === 0){
             clearWindow ()
         }
@@ -54,14 +55,6 @@ function addingOrderedFood (foodXx){
         return foodObj.id == Number(foodXx)
     })[0]
     orderedList.push(foodToAdd)
-    /*
-    if(orderedList.includes(foodToAdd)){
-        console.log(foodToAdd.name)
-    } else{
-        orderedList.push(foodToAdd)
-        //orderedFoodList.innerHTML = orderingList(orderedList).join('')
-    }
-    */
     orderedFoodList.innerHTML = orderingList(orderedList).join('')
     totalP.innerHTML = totalPrice(orderedList)
 }
@@ -81,10 +74,16 @@ function totalPrice (price){
     const totalPrc = price.reduce(function (total, singlePrice){
         return total + singlePrice.price
     }, 0)
+    
+    const tenPerDisc = (totalPrc * 10) / 100
+    const fifteenPerDisc = (totalPrc * 15) / 100
     if (totalPrc > 50){
-        console.log ('ciao Bianca')
+        return `10% $${totalPrc - tenPerDisc}`
+    } 
+    if (totalPrc > 70){
+        return `15% $${totalPrc - fifteenPerDisc}`
     }
-    //console.log(typeof totalPrc)
+    
     return `$${totalPrc}`
 
 }
