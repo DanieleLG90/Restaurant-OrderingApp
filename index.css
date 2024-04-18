@@ -151,10 +151,31 @@ h2{
 .totalP{
     margin: 0 0 0 auto;
     font-size: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
+.totalDisc{
+    font-size: 18px;
+    text-decoration: line-through;
+}
+
+.discount{
+    color: red;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.finalPrice{
+    margin-top: 5px;
+    font-size: 21px;
+    text-align: right;
+}
 .completeOrderBtn{
     margin-top: 12px;
+    margin-bottom: 15px;
     padding: 6px 0;
     background-color:#34d399;
     color: white;

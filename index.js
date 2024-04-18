@@ -74,22 +74,22 @@ function totalPrice (price){
     const totalPrc = price.reduce(function (total, singlePrice){
         return total + singlePrice.price
     }, 0)
-    
     const tenPerDisc = (totalPrc * 10) / 100
     const fifteenPerDisc = (totalPrc * 15) / 100
     if (totalPrc < 50){
-        //return `10% $${totalPrc - tenPerDisc}`
         return `$${totalPrc}`
         console.log('minore 50')
     } else if (totalPrc < 70){
-        //return `15% $${totalPrc - fifteenPerDisc}`
-        return `10% $${totalPrc - tenPerDisc}`
-        console.log('minore 70')
+        return `<div>
+                    <span class="discount">10%</span><span class="totalDisc">$${totalPrc}</span>
+                </div>
+                <span class="finalPrice">$${totalPrc - tenPerDisc}</span>`
     } else{
-        return `15% $${totalPrc - fifteenPerDisc}`
-        console.log('maggiore 70')
+        return `<div>
+                    <span class="discount">15%</span><span class="totalDisc">$${totalPrc}</span>
+                </div>
+                <span class="finalPrice">$${totalPrc - fifteenPerDisc}</span>` 
     }
-    //return `$${totalPrc}`
 }
 
 function removeItem (food){
@@ -111,7 +111,6 @@ loginForm.addEventListener('submit', function(e){
 })
 
 document.getElementById('loginForm').addEventListener('submit', function(){
-   // console.log('ciao')
     orderingContainer.innerHTML = `<div>
                                     <h4 class='greatingMsg'>Thanks, ${customerName.value}! Your order is on the way!</h4>
                                     <div class="promo">
